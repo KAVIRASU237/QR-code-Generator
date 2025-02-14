@@ -33,7 +33,7 @@ fetch(img).then((response)=>response.blob())
   return (
     <div className="app-container">
 
-        <h1>QR CODE GENERATOR</h1>
+        <h1>QR CODE <span>Generator</span></h1>
 
         {loading && <p>Please wait...</p>}
             {img && <img src={img} className='qr-image' />}
@@ -45,7 +45,7 @@ fetch(img).then((response)=>response.blob())
                 image size (eg., 150):
             </label>
             <input type='text' value={qrSize} onChange={(e)=>setQrsize(e.target.value)} id='sizeInput' placeholder='enter image size'></input>
-            <button className='Generate-btn' onClick={generateQR} disabled={loading}>Generate QR code</button>
+            <button className='Generate-btn' onClick={generateQR} disabled={loading}>Generate</button>
             <button className='Download-btn' onClick={downloadQR}>Download QR code</button>
        <p>Designed By Kavirasu</p>
       
